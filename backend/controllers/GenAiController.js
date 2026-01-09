@@ -215,7 +215,7 @@ You are a friendly, practical financial assistant. Based on this summary, give 3
 
 Return JSON ONLY in this format:
 {
-  "insights": ["Insight 1", "Insight 2", "Insight 3" , "Insight 4"]
+  "insights": ["Insight 1", "Insight 2", "Insight 3"]
 }
     `;
 
