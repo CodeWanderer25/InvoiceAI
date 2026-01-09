@@ -5,7 +5,7 @@ getInvoices,
 getInvoiceById,
 updateInvoice,
 deleteInvoice,
-} = require("../controllers/invoiceController.js");
+} = require("../controllers/InvoiceController.js");
 const authProtect = require("../middlewares/AuthMiddleware");
 
 
