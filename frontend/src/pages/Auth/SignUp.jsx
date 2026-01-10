@@ -17,7 +17,7 @@ const Signup = () => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    username: "",      // ✅ corrected field
+    username: "",      
     email: "",
     password: "",
     confirmPassword: "",

@@ -1,4 +1,4 @@
-export const BASE_URL = "http://localhost:8000";
+export const BASE_URL = "https://invoiceai-lzko.onrender.com";
 
 export const API_ROUTES = {
   AUTH: {
