@@ -9,6 +9,8 @@ const connectDB = require("./config/db");
 
 const app = express();
 
+
+
 // Middleware to handle CORS
 app.use(
   cors({
@@ -22,13 +24,27 @@ app.use(
 connectDB();
 
 // Middleware
-app.use(express.json()); // 🔥 REQUIRED
+app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }));
 
 // Routes Here
 app.use("/api/auth",authRoutes);
 app.use("/api/invoice", authInvoice);
 app.use("/api/genai", authGenAI);
+
+// Serve frontend build
+app.use(
+  express.static(path.join(__dirname, "..", "frontend", "dist"))
+);
+
+app.use((req, res) => {
+  res.sendFile(
+    path.join(__dirname, "..", "frontend", "dist", "index.html")
+  );
+});
+
+
+
 
 // Start Server
 const PORT = process.env.PORT || 5000;
